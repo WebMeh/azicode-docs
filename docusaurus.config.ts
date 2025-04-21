@@ -125,12 +125,12 @@ const config: Config = {
             },
             {
               label: 'Formateur',
-              href: 'hhttps://www.linkedin.com/in/el-mahdy-rachid-479733177/',
+              href: 'https://www.linkedin.com/in/el-mahdy-rachid-479733177',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Azicode 62. Créé par le formateur Rachid.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Azicode 62. Créé par le formateur Rachid El Mahdy.`,
     },
     prism: {
       theme: prismThemes.github,
