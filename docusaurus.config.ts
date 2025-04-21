@@ -80,10 +80,9 @@ const config: Config = {
           position: 'left',
           label: 'Tutorial',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/facebook/docusaurus',
-          label: 'GitHub',
+          href: 'https://azicode62.com/',
+          label: 'Site',
           position: 'right',
         },
       ],
@@ -126,7 +125,7 @@ const config: Config = {
             },
             {
               label: 'Formateur',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'hhttps://www.linkedin.com/in/el-mahdy-rachid-479733177/',
             },
           ],
         },
