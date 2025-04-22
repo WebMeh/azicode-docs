@@ -25,7 +25,11 @@ Dans le fichier `app.js`, écris ce code :
 ```js
 console.log("Bonjour depuis Node.js !");
 ```
-
+### Exécution
+Exécuter le code avec la commande suivante
+```|
+node app.js
+```
 ---
 
 ##  Exemple avec les fonctions
