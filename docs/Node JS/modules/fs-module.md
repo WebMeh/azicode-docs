@@ -67,7 +67,7 @@ fs.mkdir('monDossier', function(err) {
 
 ```
 
-### Exercice pratique
+### Exercice d'application
 - Utiliser `fs` pour écrire, lire et modifier un fichier.
 -  Crée trois dossiers <strong> `cours` </strong>, <strong>`exercices`</strong> et <strong> `projets` </strong>.
 - Crée un fichier <strong> `seance1.txt` </strong> dans le dossier <strong>`cours`</strong> contenant la phrase :
