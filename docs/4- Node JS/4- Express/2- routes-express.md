@@ -115,4 +115,19 @@ app.delete('/utilisateurs/:id', (req, res) => {
   - `/formations/:id` : renvoie un message avec l’ID.
   - `/formateur/:nom` : renvoie un message personnalisé avec le nom du formateur.
 
+## Testez vos routes avec Postman
+
+:::tip Astuce Pour tester facilement vos routes HTTP (GET, POST, PUT, DELETE...), utilisez Postman :
+
+- Téléchargez et installez `Postman` (<a target='_blank' href="https://www.postman.com/downloads/">Lien de téléchargement</a>)
+- Lancez votre serveur Node.js
+
+- Ouvrez Postman
+
+- Entrez l’URL de votre API (ex: http://localhost:3000/formations)
+
+- Choisissez la méthode (GET, POST, etc.)
+
+- Cliquez sur Send pour voir la réponse
+:::
 
