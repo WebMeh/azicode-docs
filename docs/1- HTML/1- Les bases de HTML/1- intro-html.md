@@ -3,7 +3,7 @@ id: intro-html
 title: Introduction à HTML
 ---
 
-# Qu'est-ce que HTML ?
+# Qu'est-ce que HTML5 ?
 
 HTML (HyperText Markup Language) est le langage de base utilisé pour créer des pages web. Il permet de structurer le contenu d’un site (titres, paragraphes, images, liens...).
 
