@@ -31,3 +31,13 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+
+.demo-box {
+  background-color: #77aaec;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  font-size: 1rem;
+}

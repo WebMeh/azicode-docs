@@ -14,8 +14,8 @@ Pour créer un lien, on utilise la balise `<a>`, appelée **balise d’ancrage**
 ```html
 <a href="https://www.google.com">Aller sur Google</a>
 ```
-:::info
-### Attributs importants 
+:::info Attributs importants 
+
 - `href` : Lien vers la ressource.
 - `target="_blank"` : Ouvre le lien dans un nouvel onglet (optionnel).
 :::
@@ -26,14 +26,13 @@ Pour créer un lien, on utilise la balise `<a>`, appelée **balise d’ancrage**
 ```
 ## Les images en html
 Pour afficher une image sur la page, on utilise la balise auto-fermante `<img>`.
-:::info
-### Attributs importants 
+:::info Attributs importants 
 - `src` : chemin vers l’image.
 - `alt` : s’affiche si l’image ne se charge pas, utile aussi pour l’accessibilité. 
 :::
 ```html
 <img src="logo.png" alt="Exemple d'image HTML">
 ```
-:::warning
+:::warning Attention
 L’attribut `alt` est obligatoire : il permet aux lecteurs d’écran de décrire l’image aux personnes malvoyantes.
 :::

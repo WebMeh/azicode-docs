@@ -93,6 +93,106 @@ app.listen(port, () => {
 });
 
 ```
+## Exemple pratique
+
+### Côté serveur 
+```js
+const formations = [
+  { id: 1, titre: "Node.js ", duree: "3 mois" },
+  { id: 2, titre: "Frontend avec Bootstrap", duree: "24 jours" }
+];
+
+
+app.use(express.static(path.join(__dirname, 'public')));
+
+// Route pour toutes les formations
+app.get('/formations', (req, res) => {
+  res.json(formations);
+});
+
+// Route dynamique avec paramètre id
+app.get('/formations/:id', (req, res) => {
+  const id = parseInt(req.params.id);
+  const formation = formations.find(f => f.id === id);
+  if (formation) {
+    res.json(formation);
+  } else {
+    res.status(404).json({ message: "Formation non trouvée" });
+  }
+});
+```
+
+:::success Les routes utilisées
+- `/formations` pour retourner toutes les formations.
+- `/formations/:id` pour retourner une formation par son id.
+:::
+
+### Côté client –  [ Utiliser fetch()](../../3-%20Javascript/3-%20Fetch%20API/fetch-api.md)
+la page `formations.html` contient toutes les formations.
+```js 
+<div id="formations-container" class="row"></div>
+<script>
+    fetch('/formations')
+      .then(res => res.json())
+      .then(data => {
+        const container = document.getElementById('formations-container');
+        data.forEach(formation => {
+          const card = document.createElement('div');
+          card.className = 'col-md-4 mb-4';
+          card.innerHTML = `
+            <div class="card h-100">
+              <img src="img/${formation.image}" class="card-img-top" alt="${formation.title}">
+              <div class="card-body">
+                <h5 class="card-title">${formation.title}</h5>
+                <p class="card-text">${formation.description}</p>
+                <a href="formation-details.html?id=${formation.id}" class="btn btn-primary"> Details</a>
+              </div>
+            </div>
+          `;
+          container.appendChild(card);
+        });
+      });
+  </script>
+```
+
+La page <code> formation-details.html </code> permet de voir les informations d'une formation donnée par l'`id`.
+Si tu es sur une page avec une URL comme :
+```
+http://localhost:8888/formation-details.html?id=2
+```
+Tu peux récupérer id comme ceci :
+```js
+const params = new URLSearchParams(window.location.search);
+const id = params.get('id'); 
+```
+Et ensuite :
+```html
+<div class="formation-container"></div>
+<script>
+    const id = new URLSearchParams(window.location.search).get('id');
+
+    fetch(`/formations/${id}`)
+      .then(res => res.json())
+      .then(formation => {
+        const container = document.getElementById('formation-container')
+        const card = document.createElement('div');
+          card.className = 'col-md-4 mb-4';
+          card.innerHTML = `
+            <div class="card h-100">
+              <img src="img/${formation.image}" class="card-img-top" alt="${formation.title}">
+              <div class="card-body">
+                <h5 class="card-title">${formation.title}</h5>
+                <p class="card-text">${formation.description}</p>
+              </div>
+            </div>
+          `;
+          container.appendChild(card);
+      })
+      .catch(() => {
+        document.body.innerHTML = '<div class="container mt-5"><h2>Aucune formation avec cet ID</h2></div>';
+      });
+  </script>
+```
 ## Autres méthodes HTTP
 ```js
 app.post('/utilisateurs', (req, res) => {
