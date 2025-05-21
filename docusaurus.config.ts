@@ -68,25 +68,13 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'Azicode 62 MOOC',
-      logo: {
-        alt: 'My Site Logo',
-        src: 'img/logo.png',
-      },
-      items: [
-        {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
-          position: 'left',
-          label: 'Tutorial',
-        },
-        {
-          href: 'https://azicode62.com/',
-          label: 'Site',
-          position: 'right',
-        },
-      ],
-    },
+  title: 'Azicode 62 MOOC',
+  logo: {
+    alt: 'Logo Azicode',
+    src: 'img/logo.png',
+  },
+  items: [], // on enlève tous les liens ici
+},
     footer: {
       style: 'dark',
       links: [
