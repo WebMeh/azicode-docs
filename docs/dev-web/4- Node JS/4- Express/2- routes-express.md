@@ -127,7 +127,7 @@ app.get('/formations/:id', (req, res) => {
 - `/formations/:id` pour retourner une formation par son id.
 :::
 
-### Côté client –  [ Utiliser fetch()](../../3-%20Javascript/3-%20Fetch%20API/fetch-api.md)
+### Côté client –  [ Utiliser fetch()](/docs/dev-web/3-%20Javascript/4-%20Fetch%20API/fetch-api.md)
 la page `formations.html` contient toutes les formations.
 ```js 
 <div id="formations-container" class="row"></div>

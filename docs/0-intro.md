@@ -9,7 +9,7 @@ Bienvenue sur **Azicode 62**, votre plateforme de formation moderne et interacti
 
 ---
 
-## 🚀 Nos Formations Disponibles
+##  Nos Formations Disponibles
 
 Nous proposons **trois parcours complets**, conçus pour vous amener du niveau débutant jusqu’à un niveau professionnel :
 
@@ -20,7 +20,7 @@ Nous proposons **trois parcours complets**, conçus pour vous amener du niveau d
 -  Mini-projets après chaque module
 -  Projet final de site web professionnel
 
-➡️ [Commencer la formation Développeur Web](dev-web/introduction)
+➡️ [Commencer la formation Développeur Web](/docs/dev-web/0-introduction.md)
 
 ---
 
@@ -31,7 +31,7 @@ Nous proposons **trois parcours complets**, conçus pour vous amener du niveau d
 -  Connexion à des API
 -  Tests et déploiement
 
-➡️ [Commencer la formation Développeur Mobile](../dev-mobile/introduction)
+➡️ [Commencer la formation Développeur Mobile](/docs/dev-mobile/introduction.md)
 
 ---
 
@@ -42,7 +42,7 @@ Nous proposons **trois parcours complets**, conçus pour vous amener du niveau d
 -  Utilisation des outils pro (Figma, WordPress…)
 - 👨 Mise en ligne de projets réels
 
-➡️ [Commencer la formation Intégrateur Web](../integrateur-web/introduction)
+➡️ [Commencer la formation Intégrateur Web](/docs/integrateur-web/introduction.md)
 
 ---
 
