@@ -48,9 +48,9 @@ Nous proposons **trois parcours complets**, conçus pour vous amener du niveau d
 
 ## 💡 Pourquoi choisir Azicode 62 ?
 
-- ✅ Pédagogie progressive et claire
-- 👨‍🏫 Encadrement par des professionnels passionnés
-- 🧪 Activités, quiz, TP, projets réels
-- 🎓 Une certification finale à l’issue de chaque formation
+- ✅ Pédagogie progressive et claire.
+- 👨‍🏫 Encadrement par des professionnels passionnés.
+- 🧪 Activités, quiz, TP, projets réels.
+- 🎓 Une certification finale à l’issue de chaque formation.
 
 ---
