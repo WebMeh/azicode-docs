@@ -5,7 +5,6 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import Heading from '@theme/Heading';
-
 import styles from './index.module.css';
 import React, { useState, useEffect } from 'react';
 
@@ -34,18 +33,26 @@ export default function Home(): ReactNode {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
-  const allowedPasswords = ['azicode62', 'dev2025']; // À adapter
+  const allowedPasswords = ['azicode62', 'dev2025']; // Replace with yours
+  const SESSION_DURATION_MS = 60 * 60 * 1000; // 1 hour
 
   useEffect(() => {
-    const logged = localStorage.getItem('isLoggedIn');
-    if (logged === 'true') {
+    const loginTime = localStorage.getItem('loginTime');
+    const now = Date.now();
+
+    if (loginTime && now - parseInt(loginTime, 10) < SESSION_DURATION_MS) {
       setIsLoggedIn(true);
+    } else {
+      localStorage.removeItem('isLoggedIn');
+      localStorage.removeItem('loginTime');
+      setIsLoggedIn(false);
     }
   }, []);
 
   const handleLogin = () => {
     if (allowedPasswords.includes(password)) {
       localStorage.setItem('isLoggedIn', 'true');
+      localStorage.setItem('loginTime', Date.now().toString());
       setIsLoggedIn(true);
     } else {
       setError('Mot de passe incorrect.');
@@ -55,23 +62,73 @@ export default function Home(): ReactNode {
   if (!isLoggedIn) {
     return (
       <Layout title="Connexion requise">
-        <div style={{ textAlign: 'center', marginTop: '100px' }}>
-          <h1>🔒 Accès à la documentation</h1>
-          <input
-            type="password"
-            placeholder="Mot de passe"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            style={{ padding: '10px', fontSize: '16px' }}
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            minHeight: '80vh',
+            padding: '2rem',
+            gap: '3rem',
+            flexWrap: 'wrap',
+          }}
+        >
+          {/* Illustration */}
+          <img
+            src="/img/login-illustration.jpg"
+            alt="Login Illustration"
+            style={{ maxWidth: '400px', width: '100%' }}
           />
-          <br />
-          <button
-            onClick={handleLogin}
-            style={{ marginTop: '10px', padding: '10px 20px', fontSize: '16px' }}
+
+          {/* Formulaire */}
+          <div
+            style={{
+              border: '1px solid #ccc',
+              borderRadius: '12px',
+              padding: '2rem',
+              maxWidth: '400px',
+              width: '100%',
+              boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
+              backgroundColor: '#fff',
+              textAlign: 'center',
+            }}
           >
-            Se connecter
-          </button>
-          {error && <p style={{ color: 'red' }}>{error}</p>}
+            <h2 style={{ marginBottom: '1rem' }}>🔐 Connexion requise</h2>
+            <p style={{ marginBottom: '1rem', color: '#666' }}>
+              Entrez le mot de passe pour accéder aux formations
+            </p>
+            <input
+              type="password"
+              placeholder="Mot de passe"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              style={{
+                padding: '10px',
+                width: '100%',
+                fontSize: '16px',
+                borderRadius: '6px',
+                border: '1px solid #ccc',
+                marginBottom: '1rem',
+              }}
+            />
+            <button
+              onClick={handleLogin}
+              style={{
+                backgroundColor: '#3366ff',
+                color: '#fff',
+                border: 'none',
+                padding: '10px 20px',
+                borderRadius: '6px',
+                cursor: 'pointer',
+                fontWeight: 'bold',
+                fontSize: '16px',
+                width: '100%',
+              }}
+            >
+              Se connecter
+            </button>
+            {error && <p style={{ color: 'red', marginTop: '1rem' }}>{error}</p>}
+          </div>
         </div>
       </Layout>
     );
