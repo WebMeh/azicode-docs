@@ -36,3 +36,12 @@ Pour afficher une image sur la page, on utilise la balise auto-fermante `<img>`.
 :::warning Attention
 L’attribut `alt` est obligatoire : il permet aux lecteurs d’écran de décrire l’image aux personnes malvoyantes.
 :::
+
+## Les vidéos en html
+```html
+<video width="640" height="360" controls>
+    <source src="video.mp4" type="video/mp4">
+    <source src="video.webm" type="video/webm">
+    Votre navigateur ne support pas cette vidéo.
+</video>
+```
