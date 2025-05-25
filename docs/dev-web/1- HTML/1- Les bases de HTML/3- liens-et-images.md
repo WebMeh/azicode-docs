@@ -1,6 +1,6 @@
 ---
 id: liens-et-images
-title: Liens et images
+title: Liens et media
 ---
 
 # Liens et images en HTML
@@ -44,4 +44,13 @@ L’attribut `alt` est obligatoire : il permet aux lecteurs d’écran de décri
     <source src="video.webm" type="video/webm">
     Votre navigateur ne support pas cette vidéo.
 </video>
+```
+
+## Audio en html
+```html
+<audio controls>
+    <source src="music.mp3" type="audio/mpeg">
+    <source src="music.ogg" type="audio/ogg">
+    Votre navigateur ne support pas cet element.
+</audio>
 ```
