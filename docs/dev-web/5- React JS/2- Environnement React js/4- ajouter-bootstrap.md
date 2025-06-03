@@ -23,7 +23,7 @@ Utiliser `className` au lieu de `class` en React.
 :::
 
 
-##  Avec MDN
+##  Avec NPM
 1. Ouvrir le terminal
 2. Installer bootstrap
 ```bash
