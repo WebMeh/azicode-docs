@@ -5,7 +5,7 @@ title: Ajouter Bootstrap
 
 # Ajouter Bootstrap au projet React
 
-##  Avec MDN
+##  Avec le lien CDN
 1. Ouvrir `index.html`
 2. Ajouter le lien CDN Bootstrap dans `<head>` :
 ```html
