@@ -22,6 +22,21 @@ Un formulaire HTML permet à un utilisateur **d’envoyer des données** à un s
 </form>
 ```
 ## Éléments courants des formulaires
+## Tutoriel en vidéo
+### Partie 1:
+
+<video width="640" height="360" controls autoplay>
+  <source src="/videos/forms-1.mkv" type="video/mp4" />
+  Votre navigateur ne supporte pas la lecture vidéo.
+</video>
+
+### Partie 2:
+
+<video width="640" height="360" controls autoplay>
+  <source src="/videos/forms-2.mkv" type="video/mp4" />
+  Votre navigateur ne supporte pas la lecture vidéo.
+</video>
+
 ### Champ de texte
 ```html
 <label>Nom : </label>
@@ -44,6 +59,7 @@ Un formulaire HTML permet à un utilisateur **d’envoyer des données** à un s
 ```
 <label>Email: </label>
 <input type="email" name="emil" placeholder="Entrez votre mot  email" />
+
 
 ### Zone de texte (textarea)
 ```html
