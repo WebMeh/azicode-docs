@@ -22,6 +22,12 @@ Comprendre la structure d’une page HTML est essentiel pour écrire du code pro
 | `<footer>`   | Pied de page (infos contact, copyright, liens bas…)                 |
 
 ---
+## Tutoriel en vidéo
+
+<video width="640" height="360" controls autoplay>
+  <source src="/videos/html_semantic.mkv" type="video/mp4" />
+  Votre navigateur ne supporte pas la lecture vidéo.
+</video>
 
 ##  Exemple de structure HTML complète
 
