@@ -1,0 +1,18 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.Node Js - Cours": {
+    "message": "Node Js - Cours",
+    "description": "The label for category Node Js - Cours in sidebar tutorialSidebar"
+  }, 
+  "theme.docs.paginator.previous": {
+    "message": "Précédent",
+    "description": "The label for the 'previous' button in pagination"
+  },
+  "theme.docs.paginator.next": {
+    "message": "Suivant",
+    "description": "The label for the 'next' button in pagination"
+  }
+}
