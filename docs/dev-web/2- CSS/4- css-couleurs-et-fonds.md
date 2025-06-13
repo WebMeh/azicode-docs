@@ -40,3 +40,22 @@ p {
   background-color: rgba(0, 0, 0, 0.5); /* Noir transparent */
 }
 ```
+## Fonds en css
+
+- Couleur de fond 
+```css
+background-color: lightblue;
+```
+
+- Dégradé linéaire
+```css
+background: linear-gradient(to right, red, yellow);
+```
+
+- Image en fond 
+```css
+background-image: url("image.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+```
+
