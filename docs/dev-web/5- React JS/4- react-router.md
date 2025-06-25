@@ -68,8 +68,8 @@ function App() {
   return (
     <Router>
       <nav>
-        <Link to="/">Accueil</Link> | 
-        <Link to="/about">À propos</Link> | 
+        <Link to="/">Accueil</Link> 
+        <Link to="/about">À propos</Link> 
         <Link to="/contact">Contact</Link>
       </nav>
       <Routes>
@@ -85,3 +85,70 @@ export default App;
 
 ```
 
+##  Routes dynamiques
+Une route dynamique est une route dont une partie du chemin (URL) est variable. <br />
+<strong> Exemple </strong> <br />
+
+- /user/1
+- /user/2
+- /produit/chaussure
+
+On utilise un paramètre dynamique dans la définition de la route comme ceci :
+```jsx
+<Route path="/user/:id" element={<User />} />
+```
+:::info Information
+`:id` est une variable qu’on pourra récupérer dans le composant `User`.
+:::
+
+###  Récupérer useParams() 
+```jsx
+import { useParams } from 'react-router-dom';
+
+function User() {
+  const { id } = useParams();
+
+  return (
+    <div>
+      <h1>Profil de l'utilisateur {id}</h1>
+    </div>
+  );
+}
+```
+
+:::info Information
+`useParams()` est un hook de react-router-dom qui retourne un objet avec tous les paramètres de l'`URL`.
+:::
+
+## Plusieurs paramètres 
+```jsx
+<Route path="/produit/:categorie/:id" element={<Produit />} />
+```
+
+Pour récupérer :
+```jsx
+const { categorie, id } = useParams();
+```
+
+## Paramètre de requête
+Un paramètre de requête se présente comme :
+```jsx
+/products?title=tshirt
+```
+###  Récupérer avec useSearchParams()
+```jsx
+import { useSearchParams } from "react-router-dom";
+
+function Produits() {
+  const [searchParams] = useSearchParams();
+
+  const title = searchParams.get("title");
+
+  return (
+    <div>
+      <h2>Produits</h2>
+      <p>Titre du produit : {title}</p>
+    </div>
+  );
+}
+```
