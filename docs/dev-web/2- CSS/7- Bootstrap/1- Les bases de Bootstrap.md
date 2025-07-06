@@ -75,6 +75,34 @@ Bootstrap propose un système de couleurs standardisé pour harmoniser le design
 ## Atelier 1
 ![Texte alternatif](/img/bootstrap-text.png)
 
+## Espacement 
+Bootstrap utilise un système utilitaire basé sur des classes abrégées pour gérer les espacements internes (**padding**) et externes (**margin**).
+| Élément                      | Signification                                                   |
+| ---------------------------- | --------------------------------------------------------------- |
+| `m`                          | Margin (marge externe)                                          |
+| `p`                          | Padding (marge interne)                                         |
+| `t`, `b`, `s`, `e`, `x`, `y` | top, bottom, start (gauche), end (droite), horizontal, vertical |
+| `0` à `5`                    | Taille de l’espacement                                          |
+
+**Exemples:**
+- Padding (espacement interne)
+| Classe | Description                       |
+| ------ | --------------------------------- |
+| `p-0`  | Aucun padding                     |
+| `p-3`  | Padding sur tous les côtés        |
+| `pt-2` | Padding uniquement en haut (top)  |
+| `px-4` | Padding horizontal (left + right) |
+| `py-1` | Padding vertical (top + bottom)   |
+- Margin (espacement externe)
+| Classe    | Description                     |
+| --------- | ------------------------------- |
+| `m-0`     | Aucune marge                    |
+| `m-5`     | Marge sur tous les côtés        |
+| `mt-3`    | Marge en haut                   |
+| `ms-2`    | Marge à gauche (`start`)        |
+| `me-1`    | Marge à droite (`end`)          |
+| `mx-auto` | Centrage horizontal automatique |
+
 ## Le système de grille
 Bootstrap utilise un système en 12 colonnes pour créer des layouts flexibles et responsives.
 **Exemple**
